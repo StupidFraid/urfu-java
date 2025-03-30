@@ -5,6 +5,6 @@ RUN gradle build
 
 FROM openjdk:21-jdk-slim-bullseye AS final
 ARG JAR_FILE=target/*.jar
-COPY --from=builder /app/build/libs/ums-1.2.jar app.jar
-EXPOSE 9000
+COPY --from=builder /app/build/libs/twitter-1.2.jar app.jar
+EXPOSE 9001
 ENTRYPOINT ["java", "-jar", "app.jar"]
