@@ -6,6 +6,6 @@ server:
 spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://0.0.0.0:3306/ums?serverTimezone=UTC&useLegacyDatetimeCode=false
+    url: jdbc:mysql://10.10.200.49:3306/ums?serverTimezone=UTC&useLegacyDatetimeCode=false
     username: root
     password: passw
