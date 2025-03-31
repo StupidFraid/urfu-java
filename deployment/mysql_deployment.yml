@@ -17,7 +17,8 @@ spec:
     spec:
       containers:
       - name: urfu-mysql
-        image: urfu/mysql:local
+        image: docker.io/library/urfu-mysql:latest
+        imagePullPolicy: Never
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: passw

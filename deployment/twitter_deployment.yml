@@ -1,33 +1,38 @@
-#UMS Deployment
+---
+# Message Management Service Deployment
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ums
+  name: twitter
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ums
+      app: twitter
   template:
     metadata:
       labels:
-        app: ums
+        app: twitter
     spec:
       containers:
-      - name: ums
-        image: docker.io/library/urfu-ums:latest
+      - name: twitter
+        image: docker.io/library/urfu-twitter:latest
         imagePullPolicy: Never
         env:
         - name: URL_DB_UMS
-          value: jdbc:mysql://mysql-service:3306/ums?serverTimezone=UTC&useLegacyDatetimeCode=false
+          value: jdbc:mysql://mysql-service:3306/twitter?serverTimezone=UTC&useLegacyDatetimeCode=false
         - name: USERNAME_DB
           value: root
         - name: PASSWORD_DB
           value: passw
         - name: SERVICE_UMS_PORT
           value: "9000"
+        - name: SERVICE_UMS_HOST_URL
+          value: "http://ums-service"
+        - name: SERVICE_TWITTER_PORT
+          value: "9001"
         ports:
-        - containerPort: 9000
+        - containerPort: 9001
         resources:
           requests:
             memory: "256Mi"
@@ -35,15 +40,16 @@ spec:
           limits:
             memory: "512Mi"
             cpu: "500m"
+
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: ums-service
+  name: twitter-service
 spec:
   type: NodePort
   ports:
-  - port: 9000
-    targetPort: 9000
+  - port: 9001
+    targetPort: 9001
   selector:
-    app: ums
+    app: twitter
