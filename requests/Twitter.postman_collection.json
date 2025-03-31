@@ -23,9 +23,9 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:9001/messages/producer/6e27ea06-a716-4c89-af88-813749a8bd48",
+					"raw": "10.152.183.183:9001/messages/producer/6e27ea06-a716-4c89-af88-813749a8bd48",
 					"host": [
-						"localhost"
+						"10.152.183.183"
 					],
 					"port": "9001",
 					"path": [
@@ -55,9 +55,9 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:9001/messages/subscriber/70A64B54-43C3-4C18-BBEC-64590FF7E0CC",
+					"raw": "10.152.183.183:9001/messages/subscriber/70A64B54-43C3-4C18-BBEC-64590FF7E0CC",
 					"host": [
-						"localhost"
+						"10.152.183.183"
 					],
 					"port": "9001",
 					"path": [
@@ -87,9 +87,9 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:9001/subscriptions/subscriber/70A64B54-43C3-4C18-BBEC-64590FF7E0CC",
+					"raw": "10.152.183.183:9001/subscriptions/subscriber/70A64B54-43C3-4C18-BBEC-64590FF7E0CC",
 					"host": [
-						"localhost"
+						"10.152.183.183"
 					],
 					"port": "9001",
 					"path": [
@@ -116,9 +116,9 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:9001/messages/message",
+					"raw": "10.152.183.183:9001/messages/message",
 					"host": [
-						"localhost"
+						"10.152.183.183"
 					],
 					"port": "9001",
 					"path": [
@@ -144,9 +144,9 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:9001/subscriptions",
+					"raw": "10.152.183.183:9001/subscriptions",
 					"host": [
-						"localhost"
+						"10.152.183.183"
 					],
 					"port": "9001",
 					"path": [
@@ -171,9 +171,9 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:9001/subscriptions",
+					"raw": "10.152.183.183:9001/subscriptions",
 					"host": [
-						"localhost"
+						"10.152.183.183"
 					],
 					"port": "9001",
 					"path": [
@@ -198,9 +198,9 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:9001/subscriptions/subscriber/70A64B54-43C3-4C18-BBEC-64590FF7E0CC",
+					"raw": "10.152.183.183:9001/subscriptions/subscriber/70A64B54-43C3-4C18-BBEC-64590FF7E0CC",
 					"host": [
-						"localhost"
+						"10.152.183.183"
 					],
 					"port": "9001",
 					"path": [
@@ -227,9 +227,9 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:9001/messages/message/29F484AA-638E-4A9F-97CF-ACF2F33ACEF7",
+					"raw": "10.152.183.183:9001/messages/message/29F484AA-638E-4A9F-97CF-ACF2F33ACEF7",
 					"host": [
-						"localhost"
+						"10.152.183.183"
 					],
 					"port": "9001",
 					"path": [

@@ -23,9 +23,9 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:9000/users",
+					"raw": "10.152.183.248:9000/users",
 					"host": [
-						"localhost"
+						"10.152.183.248"
 					],
 					"port": "9000",
 					"path": [
@@ -53,9 +53,9 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:9000/users/user/6e27ea06-a716-4c89-af88-813749a8bd48",
+					"raw": "10.152.183.248:9000/users/user/6e27ea06-a716-4c89-af88-813749a8bd48",
 					"host": [
-						"localhost"
+						"10.152.183.248"
 					],
 					"port": "9000",
 					"path": [
@@ -85,9 +85,9 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:9000/roles",
+					"raw": "10.152.183.248:9000/roles",
 					"host": [
-						"localhost"
+						"10.152.183.248"
 					],
 					"port": "9000",
 					"path": [
@@ -112,9 +112,9 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:9000/users/user",
+					"raw": "10.152.183.248:9000/users/user",
 					"host": [
-						"localhost"
+						"10.152.183.248"
 					],
 					"port": "9000",
 					"path": [
@@ -131,9 +131,9 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:9000/users/user/52bb68f9-7cf6-46c5-9105-00d77638a840",
+					"raw": "10.152.183.248:9000/users/user/52bb68f9-7cf6-46c5-9105-00d77638a840",
 					"host": [
-						"localhost"
+						"10.152.183.248"
 					],
 					"port": "9000",
 					"path": [
