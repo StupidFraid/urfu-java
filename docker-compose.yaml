@@ -39,6 +39,6 @@ services:
       - SERVICE_UMS_PORT=9000
       - USERNAME_DB=root
       - PASSWORD_DB=passw
-      - URL_DB_TWITTER=jdbc:mysql://urfu-java-bird-db-1:3306/ums?serverTimezone=UTC&useLegacyDatetimeCode=false
+      - URL_DB_UMS=jdbc:mysql://urfu-java-bird-db-1:3306/ums?serverTimezone=UTC&useLegacyDatetimeCode=false
     depends_on:
       - bird-db

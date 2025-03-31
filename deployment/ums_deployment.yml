@@ -1,0 +1,49 @@
+#UMS Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: usermanagmentservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ums
+  template:
+    metadata:
+      labels:
+        app: ums
+    spec:
+      containers:
+      - name: ums
+        image: urfu-ums:latest
+        imagePullPolicy: Never
+        env:
+        - name: URL_DB_UMS
+          value: jdbc:mysql://bird:3306/ums?serverTimezone=UTC&useLegacyDatetimeCode=false
+        - name: USERNAME_DB
+          value: root
+        - name: PASSWORD_DB
+          value: passw
+        - name: SERVICE_UMS_PORT
+          value: 9000
+        ports:
+        - containerPort: 9000
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ums-service
+spec:
+  type: NodePort
+  ports:
+  - port: 9000
+    targetPort: 9000
+  selector:
+    app: ums
