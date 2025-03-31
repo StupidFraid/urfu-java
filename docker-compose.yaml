@@ -20,6 +20,13 @@ services:
     restart: always
     ports:
       - "9001:9001"
+    environment:
+      - SERVICE_TWITTER_PORT=9001
+      - URL_DB_TWITTER=jdbc:mysql://urfu-java-bird-db-1:3306/twitter?serverTimezone=UTC&useLegacyDatetimeCode=false
+      - USERNAME_DB=root
+      - PASSWORD_DB=passw
+      - SERVICE_UMS_HOST_URL=http://urfu-java-bird-db-1
+      - SERVICE_UMS_PORT=9000
     depends_on:
       - bird-db
 
@@ -28,5 +35,10 @@ services:
     restart: always
     ports:
       - "9000:9000"
+    environment:
+      - SERVICE_UMS_PORT=9000
+      - USERNAME_DB=root
+      - PASSWORD_DB=passw
+      - URL_DB_TWITTER=jdbc:mysql://urfu-java-bird-db-1:3306/ums?serverTimezone=UTC&useLegacyDatetimeCode=false
     depends_on:
       - bird-db
