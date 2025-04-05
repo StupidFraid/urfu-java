@@ -85,8 +85,8 @@ su - $USER
 
 microk8s status --wait-ready
 
-echo "alias kubectl='microk8s kubectl" >  ~/.bash_aliases
-echo "alias kc='microk8s kubectl" >>  ~/.bash_aliases
+echo "alias kubectl='microk8s kubectl'" >  ~/.bash_aliases
+echo "alias kc='microk8s kubectl'" >>  ~/.bash_aliases
 
 exec /bin/bash
 
