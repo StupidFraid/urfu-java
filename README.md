@@ -112,9 +112,14 @@ docker build twitter/. -t urfu-twitter
 docker build ums/. -t urfu-ums
 docker build . -t urfu-mysql
 
+mkdir docker-save
 docker save urfu-ums:latest -o ./docker-image/urfu-ums.tar
 docker save urfu-twitter:latest -o ./docker-image/urfu-twitter.tar
 docker save urfu-mysql:latest -o ./docker-image/urfu-mysql.tar
+
+microk8s ctr image import ./docker-image/urfu-mysql.tar
+microk8s ctr image import ./docker-image/urfu-ums.tar
+microk8s ctr image import ./docker-image/urfu-twitter.tar
 
 kc apply -f deployment/mysql_deployment.yml 
 kc apply -f deployment/ums_deployment.yml
