@@ -39,7 +39,7 @@ sudo usermod -aG docker $USER
 sudo systemctl enable --now docker
 ```
 
-***ТУТ НАДО ПРОВЕРИТЬ ЧТО ДЕЛАТЬ или /bin/bash или перезайти в систему***
+***Перезаходим в профиль***
 
 
 Проверим что докер работает корректно и запустим Hello world
