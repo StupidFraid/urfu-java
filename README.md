@@ -76,7 +76,9 @@ For more examples and ideas, visit:
 
 ```bash
 sudo snap install microk8s --classic
+```
 
+```bash
 sudo usermod -a -G microk8s $USER
 sudo chown -f -R $USER ~/.kube
 su - $USER
