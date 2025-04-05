@@ -131,5 +131,17 @@ kc  apply -f deployment/hpa_ums_deployment.yml
 kc get all --all-namespaces
 
 
+token=$(microk8s kubectl -n kube-system get secret | grep default-token | cut -d " " -f1)
+microk8s kubectl -n kube-system describe secret $token
+```
+получаем токен в терминале и копируем его:
 
+```
+token:      какой-то-ваш-токен
+
+```
+
+Далее смотрим какой айпишник у сервиса **kubernets-dashboard** и переходим по нему в браузеру внутри VM по https. авторизуем по токену который выдала предыдущая команда
+```
+kc get service -n kube-system
 ```
